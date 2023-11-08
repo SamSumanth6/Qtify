@@ -1,0 +1,49 @@
+.card-wrapper{
+    height: 235px;
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    margin: 50px;
+}
+
+.card{
+    border-radius: 10px;
+    overflow: hidden;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img-frame{
+    width: 100%;
+    
+    height: 170px;
+}
+.card-img-frame img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content{
+    height: 30px;
+    background-color: var(--css-white);
+    flex: 1;
+}
+
+.card-content-pill{
+    border-radius: 10px;
+    background-color: var(--css-black);
+    color: var(--css-white);
+    padding: 4px 8px;
+    margin-left: 7px;
+    font-size: 10px;
+    
+    
+}
+
+.card-label{
+    height: 30px;
+    color: var(--css-white);
+}
