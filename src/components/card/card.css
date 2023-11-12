@@ -1,10 +1,11 @@
+
 .card-wrapper{
     height: 235px;
     width: 160px;
     display: flex;
     flex-direction: column;
     row-gap: 5px;
-    margin: 50px;
+    margin-top: 10px;
 }
 
 .card{
