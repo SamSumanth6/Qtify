@@ -1,10 +1,10 @@
 import './section.css'
 import Card from "../card"
 import { useState } from 'react'
-import Carousel from '../carousel'
+import Carousel from '../Carousel'
 
 export default({ title, data })=>{
-    const[isCollapsed, setIsCollapsed] = useState(true)
+    const[isCollapsed, setIsCollapsed] = useState(false)
 
     return(<div className='section'>
         <div className='section-header'>
