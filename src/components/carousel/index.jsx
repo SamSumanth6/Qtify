@@ -13,7 +13,7 @@ import 'swiper/css/virtual';
 import Button from '../Button';
 import './carousel.css'
 
-export default ({ navId, data })=>{
+const Carousel = ({ navId, data })=>{
     return <div className='carousel-container'>
       <Swiper
     modules={[Virtual, Navigation, Pagination]}
@@ -41,3 +41,5 @@ export default ({ navId, data })=>{
     
   </div>
 }
+
+export default Carousel;

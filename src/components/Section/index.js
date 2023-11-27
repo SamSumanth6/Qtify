@@ -3,7 +3,7 @@ import Card from "../card"
 import { useState } from 'react'
 import Carousel from '../Carousel'
 
-export default({ title, data, navId })=>{
+const Section = ({ title, data, navId })=>{
     const[isCollapsed, setIsCollapsed] = useState(true)
 
     return(<div className='section'>
@@ -23,3 +23,5 @@ export default({ title, data, navId })=>{
         </div>}
     </div>)
 }
+
+export default Section;

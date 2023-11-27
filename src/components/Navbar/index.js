@@ -2,7 +2,7 @@ import Button from "../Button"
 import SearchBox from "../SearchBox"
 import "./Navbar.css"
 
-export default()=>{
+const Navbar = () => {
     return (
         <div className="navbar">
             <img src="logo.png" width={67} height={34}/>
@@ -11,3 +11,5 @@ export default()=>{
         </div>
     )
 }
+
+export default Navbar;

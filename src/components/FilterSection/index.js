@@ -5,7 +5,7 @@ import "./filterSection.css"
 import { useState } from "react";
 import { css } from "@emotion/react";
 
-export default({ title, data, filters, executeFilter}) => {
+    const FilterSection = ({ title, data, filters, executeFilter}) => {
 
     const[selectedTab, setSelectedTab] = useState(0)
 
@@ -30,3 +30,5 @@ export default({ title, data, filters, executeFilter}) => {
         <Carousel data={data} navId="filter"/>
     </div>)
 }
+
+export default FilterSection;

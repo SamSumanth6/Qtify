@@ -1,6 +1,6 @@
 import { ReactComponent as SearchIcon } from "./SearchIcon.svg"
 
-export default()=>{
+const SearchBox = () => {
     return <form style={{
         display: 'flex',
         minWidth: '570px'
@@ -26,3 +26,5 @@ export default()=>{
         </button>
     </form>
 }
+
+export default SearchBox;

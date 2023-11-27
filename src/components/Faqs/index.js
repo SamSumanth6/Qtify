@@ -6,7 +6,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-export default () => {
+const Faqs = () => {
   return (
     <div className='faq-Body'>
       <div className="heading-section">
@@ -51,3 +51,5 @@ export default () => {
     </div>
   );
 }
+
+export default Faqs;
