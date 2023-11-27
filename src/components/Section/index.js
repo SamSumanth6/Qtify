@@ -1,7 +1,7 @@
 import './section.css'
 import Card from "../card"
 import { useState } from 'react'
-import Carousel from '../Carousel'
+import Carousel from '../Carousel/index'
 
 const Section = ({ title, data, navId })=>{
     const[isCollapsed, setIsCollapsed] = useState(true)
