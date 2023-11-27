@@ -3,8 +3,8 @@ import Card from "../card"
 import { useState } from 'react'
 import Carousel from '../Carousel'
 
-export default({ title, data })=>{
-    const[isCollapsed, setIsCollapsed] = useState(false)
+export default({ title, data, navId })=>{
+    const[isCollapsed, setIsCollapsed] = useState(true)
 
     return(<div className='section'>
         <div className='section-header'>
@@ -13,7 +13,7 @@ export default({ title, data })=>{
                 setIsCollapsed(!isCollapsed)
             }}>{isCollapsed ? 'Show All':'Collapse'}</h1>
         </div>
-        {isCollapsed ? <Carousel data={data}/>:<div className='card-container'>
+        {isCollapsed ? <Carousel navId={navId} data={data}/>:<div className='card-container'>
             {data.map(cardData => <Card 
             key={cardData.id}
             imgSrc={cardData.image}

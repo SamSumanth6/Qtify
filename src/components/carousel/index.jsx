@@ -13,7 +13,7 @@ import 'swiper/css/virtual';
 import Button from '../Button';
 import './carousel.css'
 
-export default ({ data })=>{
+export default ({ navId, data })=>{
     return <div className='carousel-container'>
       <Swiper
     modules={[Virtual, Navigation, Pagination]}
@@ -25,7 +25,7 @@ export default ({ data })=>{
     //   type: 'fraction',
     // }}
     // navigation={true}
-    navigation={{nextEl: ".arrow-left", prevEl: ".arrow-right"}}
+    navigation={{nextEl: `.arrow-left-${navId}`, prevEl: `.arrow-right-${navId}`}}
     virtual
   >
     {data.map(cardData => <SwiperSlide key={cardData.id}><Card 
@@ -36,8 +36,8 @@ export default ({ data })=>{
     
     </Swiper> 
         
-    <div className='arrow-left arrow'><img src='/left.png'/></div>
-    <div className='arrow-right arrow'><img src='/right.png'/></div>
+    <div  className={`arrow-left-${navId} arrow-left arrow`}><img src='/left.png'/></div>
+    <div  className={`arrow-right-${navId} arrow-right arrow`}><img src='/right.png'/></div>
     
   </div>
 }

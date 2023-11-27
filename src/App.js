@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import Section from './components/Section';
 import FilterSection from './components/FilterSection';
+import Faqs from './components/Faqs';
 
 const ENDPOINT = 'https://qtify-backend-labs.crio.do/'
 
@@ -42,8 +43,8 @@ function App() {
     <div>
         <Navbar/>
         <HeroSection/>
-        <Section title='Top Albums' data={topAlbums}/>
-        <Section title='New Albums' data={newAlbums}/>
+        <Section navId='ta' title='Top Albums' data={topAlbums}/>
+        <Section navId='na'title='New Albums' data={newAlbums}/>
         <FilterSection title='Songs' data={filteredSongs} filters={genres} executeFilter={(genre)=> {
             if(genre === "all"){
               setFilteredSongs(songs)
@@ -51,6 +52,7 @@ function App() {
               setFilteredSongs(songs.filter(song => song.genre.key === genre))
             }
         }}/>
+        <Faqs />
     </div>
   );
 }

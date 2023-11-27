@@ -27,6 +27,6 @@ export default({ title, data, filters, executeFilter}) => {
     >
     {filters.map(f => <Tab  key={f.key} label={f.label} className="tab"/>)}
     </Tabs>
-        <Carousel data={data}/>
+        <Carousel data={data} navId="filter"/>
     </div>)
 }
