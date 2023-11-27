@@ -1,4 +1,4 @@
-import Carousel from "../Carousel";
+import Carousel from "../Carousel/index";
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import "./filterSection.css"
