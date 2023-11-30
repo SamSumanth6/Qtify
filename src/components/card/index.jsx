@@ -6,17 +6,17 @@ const Card = ({
     imgSrc,
     followersCount,
     label,
-    numSongs
+    numSongs,
 }) => {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
-        <div
-            className='card-wrapper'
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-        >
-            <Tooltip title={`${numSongs} Songs`} arrow>
+        <Tooltip title={`${numSongs} Songs`} arrow placement="top" open={isHovered}>
+            <div
+                className='card-wrapper'
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+            >
                 <div className='card'>
                     <div className='card-img-frame'>
                         <img className='card-img' src={imgSrc} alt={label} />
@@ -30,8 +30,8 @@ const Card = ({
                         <p className='card-label'>{label}</p>
                     </div>
                 </div>
-            </Tooltip>
-        </div>
+            </div>
+        </Tooltip>
     );
 };
 
