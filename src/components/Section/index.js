@@ -4,7 +4,7 @@ import Card from '../card';
 import Carousel from '../Carousel';
 
 const Section = ({ title, data, navId }) => {
-  const [isCollapsed, setIsCollapsed] = useState(true);
+  const [isCollapsed, setIsCollapsed] = useState(false);
 
   return (
     <div className='section'>

@@ -32,6 +32,7 @@ const Carousel = ({ navId, data })=>{
             imgSrc={cardData.image}
             label={cardData.title}
             followersCount={cardData.follows}
+            // numSongs={cardData.song.length}
             /></SwiperSlide>)}
     
     </Swiper> 
