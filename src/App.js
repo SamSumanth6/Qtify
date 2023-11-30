@@ -21,20 +21,24 @@ function App() {
     axios.get(`${ENDPOINT}albums/top`)
     .then( (response) =>{
       setTopAlbums(response.data)
+      console.log(response.data)
     })
     axios.get(`${ENDPOINT}albums/new`)
     .then((response) =>{
       setNewAlbums(response.data)
+      console.log(response.data)
     })
     axios.get(`${ENDPOINT}songs`)
     .then((response) =>{
       setSongs(response.data)
       setFilteredSongs(response.data)
+      console.log(response.data)
     })
     axios.get(`${ENDPOINT}genres`)
     .then((response) =>{
       setGenres([{"key":"all","label":"All"},...response.data.data])
     })
+    
   },[])
 
 
