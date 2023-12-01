@@ -10,7 +10,7 @@ import 'swiper/css/navigation';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/virtual';
-import Button from '../Button';
+// import Button from '../Button';
 import './carousel.css'
 import { useState } from 'react';
 
