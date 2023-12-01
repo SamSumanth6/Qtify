@@ -12,8 +12,19 @@ import 'swiper/css';
 import 'swiper/css/virtual';
 import Button from '../Button';
 import './carousel.css'
+import { useState } from 'react';
 
 const Carousel = ({ navId, data })=>{
+  const [hoveredCard, setHoveredCard] = useState(null);
+
+  const handleCardMouseEnter = (index) => {
+      setHoveredCard(index);
+  };
+
+  const handleCardMouseLeave = () => {
+      setHoveredCard(null);
+  };
+
     return <div className='carousel-container'>
       <Swiper
     modules={[Virtual, Navigation, Pagination]}
@@ -28,11 +39,14 @@ const Carousel = ({ navId, data })=>{
     navigation={{nextEl: `.arrow-left-${navId}`, prevEl: `.arrow-right-${navId}`}}
     virtual
   >
-    {data.map(cardData => <SwiperSlide key={cardData.id}><Card 
+    {data.map((cardData,index) => <SwiperSlide key={cardData.id}><Card 
             imgSrc={cardData.image}
             label={cardData.title}
             followersCount={cardData.follows}
             // numSongs={cardData.song.length}
+            onMouseEnter={() => handleCardMouseEnter(index)}
+            onMouseLeave={handleCardMouseLeave}
+            isHovered={hoveredCard === index}
             /></SwiperSlide>)}
     
     </Swiper> 

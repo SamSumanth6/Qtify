@@ -9,13 +9,20 @@ const Card = ({
     numSongs,
 }) => {
     const [isHovered, setIsHovered] = useState(false);
+    const handleMouseEnter = () => {
+        setIsHovered(true);
+    };
+
+    const handleMouseLeave = () => {
+        setIsHovered(false);
+    };
 
     return (
         <Tooltip title={`${numSongs} Songs`} arrow placement="top" open={isHovered}>
             <div
                 className='card-wrapper'
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
             >
                 <div className='card'>
                     <div className='card-img-frame'>
